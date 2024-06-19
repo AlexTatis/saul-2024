@@ -1,4 +1,5 @@
 <script setup lang="ts">
+alert("Misión: Derrota a Brock")
 </script>
 
 <template>

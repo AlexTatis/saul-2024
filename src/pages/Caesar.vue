@@ -9,6 +9,7 @@ const router = useRouter()
 
 function toPokemon() {
     if (code.value == 1234567) {
+        alert('Código correcto! Hamlet estaría orgulloso. Te echas unos Pokémon?')
         router.push('/emu')
     } else {
         alert('Código incorrecto Saúl, womp womp')
