@@ -68,7 +68,7 @@ function verify() {
         }
 
     } else {
-        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+        window.location.href = "https://www.youtube.com/watch?v=2qBlE2-WL60";
     }
 }
 
@@ -90,12 +90,14 @@ const picked = ref();
             <div class="mt-2 mb-4 flex flex-col gap-2 flex-1">
                 <button
                     v-for="(option, index) in questions[Number.parseInt($route.params.number as string, 10) - 1].options"
-                    class="btn border-2 border-white w-full" @click="picked = index"
+                    class="btn border-2 border-white w-full hover:bg-white hover:text-black hover:border-white selection:bg-white selection:border-white"
+                    @click="picked = index"
                     :class="{ 'bg-white text-black': index == picked, 'bg-transparent text-white': index != picked }">
                     {{ option.answer }}
                 </button>
             </div>
-            <button to="/question/1" class="bg-white text-black p-2 rounded-md text-center btn w-full font-bold"
+            <button to="/question/1"
+                class="btn border-2 border-white w-full hover:bg-white hover:text-black hover:border-white selection:bg-white selection:border-white"
                 @click="verify">
                 Verifícame esta
             </button>
