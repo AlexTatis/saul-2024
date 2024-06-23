@@ -64,7 +64,7 @@ function verify() {
         if (next_question <= 4) {
             router.push({ path: `/question/${next_question}` })
         } else {
-            router.push({path: "/caesar"})
+            router.push({ path: "/caesar" })
         }
 
     } else {
@@ -76,19 +76,28 @@ const picked = ref();
 </script>
 
 <template>
-    <div class="p-4">
-        <h1 class="text-3xl font-extrabold">Pregunta {{ $route.params.number }}</h1>
-        <h2 class="text-xl font-bold"
-            v-html="questions[Number.parseInt($route.params.number as string, 10) - 1].question"></h2>
-        <div class="my-4">
-            <div class="flex gap-3"
-                v-for="(option, index) in questions[Number.parseInt($route.params.number as string, 10) - 1].options">
-                <input type="radio" id="one" :value="index" v-model="picked" />
-                <label for="one">{{ option.answer }}</label>
-            </div>
+    <div class="p-4 h-screen flex flex-col">
+        <div class="flex w-full justify-between mb-4">
+            <p class="text-2xl font-bold">PREGUNTA</p>
+            <p class="text-sm">{{ $route.params.number }} / {{ questions.length }}</p>
         </div>
-        <button to="/question/1" class="bg-white text-black p-2 rounded-md text-center" @click="verify">
-            Verifícame esta
-        </button>
+        <div class="border-2 border-white px-2 py-6 rounded-md mb-4">
+            <p class="text-xl font-bold text-center"
+                v-html="questions[Number.parseInt($route.params.number as string, 10) - 1].question"></p>
+        </div>
+        <p class="text-2xl font-bold">RESPUESTAS</p>
+        <div class="flex flex-col justify-between h-full">
+            <div class="mt-2 mb-4 flex flex-col gap-2 flex-1">
+                <button
+                    v-for="(option, index) in questions[Number.parseInt($route.params.number as string, 10) - 1].options"
+                    class="btn border-2 border-white w-full" @click="picked = index"
+                    :class="{ 'bg-white text-black': index == picked, 'bg-transparent text-white': index != picked }">
+                    {{ option.answer }}
+                </button>
+            </div>
+            <button to="/question/1" class="bg-white text-black p-2 rounded-md text-center btn w-full font-bold" @click="verify">
+                Verifícame esta
+            </button>
+        </div>
     </div>
 </template>
