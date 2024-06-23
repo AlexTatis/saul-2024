@@ -96,8 +96,8 @@ const picked = ref();
                     {{ option.answer }}
                 </button>
             </div>
-            <button to="/question/1"
-                class="btn border-2 border-white w-full hover:bg-white hover:text-black hover:border-white selection:bg-white selection:border-white"
+            <button
+                class="btn bg-white text-black border-2 border-white w-full hover:bg-white hover:text-black hover:border-white selection:bg-white selection:border-white"
                 @click="verify">
                 Verifícame esta
             </button>
