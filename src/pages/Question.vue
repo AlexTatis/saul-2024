@@ -32,9 +32,9 @@ const questions = [
         ]
     },
     {
-        question: `Caldas, Álvaro y Lois dejaron una placa de Petri con una población de gripe española criogenizada.
+        question: `Alina, Trini y Lois dejaron una placa de Petri con una población de gripe española criogenizada.
         <br>
-        Trini y Alina, pensando que era un helado, sacan la placa de Petri del criocongelador, reiniciando el proceso de reproducción de las bacterias.
+        Álvaro y Caldas, pensando que era un helado, sacan la placa de Petri del criocongelador, reiniciando el proceso de reproducción de las bacterias.
         <br>
         La población de las bacterias se puede modelizar mediante la llamada función logística:
         <br>
