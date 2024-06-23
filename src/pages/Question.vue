@@ -76,7 +76,7 @@ const picked = ref();
 </script>
 
 <template>
-    <div class="p-4 h-screen flex flex-col">
+    <div class="p-4 h-dvh flex flex-col">
         <div class="flex w-full justify-between mb-4">
             <p class="text-2xl font-bold">PREGUNTA</p>
             <p class="text-sm">{{ $route.params.number }} / {{ questions.length }}</p>
@@ -95,7 +95,8 @@ const picked = ref();
                     {{ option.answer }}
                 </button>
             </div>
-            <button to="/question/1" class="bg-white text-black p-2 rounded-md text-center btn w-full font-bold" @click="verify">
+            <button to="/question/1" class="bg-white text-black p-2 rounded-md text-center btn w-full font-bold"
+                @click="verify">
                 Verifícame esta
             </button>
         </div>
