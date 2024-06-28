@@ -37,8 +37,8 @@ function toPokemon() {
             <h1 class="text-4xl font-extrabold mb-4 text-center">Bro, Saúl</h1>
             esto es literalmente un skill issue
         </div>
-        <button @click="toPokemon" class="bg-white text-black p-2 rounded-md text-center">...regresa cuando hayas
-            visitado al príncipe</button>
         <input type="number" class="h-16 w-48 text-center text-4xl border-2 border-white rounded-md" v-model="code">
+        <button @click="toPokemon" class="btn bg-white text-black border-2 border-white w-full hover:bg-white hover:text-black hover:border-white selection:bg-white selection:border-white">...regresa cuando hayas
+            visitado al príncipe</button>
     </div>
 </template>
