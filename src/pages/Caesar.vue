@@ -8,7 +8,7 @@ const error: Ref<boolean> = ref(false)
 const router = useRouter()
 
 function toPokemon() {
-    if (code.value == 451897) {
+    if (code.value == 6317452) {
         alert('Código correcto! Hamlet estaría orgulloso. Te echas unos Pokémon?')
         router.push('/emu')
     } else {
